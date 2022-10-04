@@ -1,0 +1,21 @@
+// Дана блок-схема задачи
+// "Перенести самое большое значение элемента в правый край массива".
+// Написать псевдо-код по блок-схеме
+// [2, 5, 13, 7, 6, 4]
+
+array = [2, 5, 13, 7, 6, 4]
+
+index = 1
+maxIndex = 0
+max = array[0]
+
+while (index < array.length) do
+    if (array[index] > max) then
+        max = array[index]
+        maxIndex = index
+    index++
+
+if (maxIndex != array.length - 1) then
+    max = array[maxIndex]
+    array[maxIndex] = array[array.length]
+    array[array.length] = max
